@@ -1,13 +1,25 @@
 def filtragem(*m):
+    import numpy as np
+    k = np.ravel(m)
+    lst = []
+
+    for y in k:
+        lst.append(y)
+
     a = 0
-    x = len(m)
+    x = len(lst)
     z = list()
     for n in range(0, x):
-        if 0.35 <= m[a] <= 0.5:
-            z.append(m[a])
+        if 0.35 <= lst[a] <= 0.5:
+            z.append(lst[a])
         a = a + 1
     print(type(m))
     print(z)
 
 
-lista = filtragem(0.35, 12, 0.5, 54, 0.4)
+
+
+import numpy as np
+
+x = np.array([[0.5, 3, 4, 3], [2, 5, 6, 2], [0.4, 1, 3, 4], [4, 5, 6, 5]])
+p = filtragem(x)
