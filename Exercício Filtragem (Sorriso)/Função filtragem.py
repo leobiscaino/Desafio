@@ -9,13 +9,15 @@ def filtragem(*m):
     a = 0
     x = len(lst)
     z = list()
+    b = list()
     for n in range(0, x):
         if 0.35 <= lst[a] <= 0.5:
             z.append(lst[a])
+            b.append(a)
         a = a + 1
     print(type(m))
     print(z)
-
+    print(b)
 
 
 
